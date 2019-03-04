@@ -5,6 +5,12 @@ body {
     background-color: #e6e6e6;
 }
 
+.tab {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .card {
     width: 400px;
     margin: 75px auto 0;
@@ -13,6 +19,10 @@ body {
     color: #444;
     text-align: center;
     font-size: 16px;
+}
+
+.tab .card {
+    margin: 50px 20px 20px;
 }
 
 .card .card-header {

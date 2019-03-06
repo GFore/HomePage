@@ -1,4 +1,4 @@
-const portfolio = [
+const portfolioCards = [
     {
         id: 1,
         name: 'Meetcha!',
@@ -39,3 +39,26 @@ const portfolio = [
         urlGithub: 'https://github.com/ianhundere/GeoMindr',
     },
 ]
+
+
+const portfolioTab = document.querySelector('[data-portfolio]');
+
+portfolioCards.forEach(card => {
+    const newCard = document.createElement("div");
+    const newCardHeader = document.createElement("div");
+    const newCardBody = document.createElement("div");
+
+    newCard.className = "card";
+    newCardHeader.className = "card-header portfolio-header";
+    newCardBody.className = "card-body";
+
+    const fullName = document.createElement("h2");
+    fullName.className = "full-name";
+    fullName.textContent = card.name;
+
+    newCardBody.appendChild(fullName);
+    newCard.appendChild(newCardHeader);
+    newCard.appendChild(newCardBody);
+    portfolioTab.appendChild(newCard);
+})
+

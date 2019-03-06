@@ -38,6 +38,19 @@ const portfolioCards = [
         urlLive: 'https://geomindr.com/home',
         urlGithub: 'https://github.com/ianhundere/GeoMindr',
     },
+    {
+        id: 4,
+        name: 'Fortune Cookie',
+        type: 'DigitalCrafts Solo Project',
+        typeLogoImg: 'logoDC.png',
+        typeLogoAlt: 'Digital Crafts Logo',
+        purpose: 'See a random Fortune Cookie or a random Coding-themed quote and Tweet any that you like.',
+        description: 'Simple Front-end web project using vanilla HTML5, CSS3, and Javascript/ES6, along with the Twitter API. This site is not yet deployed live. Check back soon!',
+        screenshotImg: 'screenshotFortune.png',
+        screenshotAlt: 'Fortune Cookie Screenshot',
+        urlLive: 'https://github.com/GFore/dc-FortuneTeller',
+        urlGithub: 'https://github.com/GFore/dc-FortuneTeller',
+    },
 ]
 
 
@@ -52,11 +65,23 @@ portfolioCards.forEach(card => {
     newCardHeader.className = "card-header portfolio-header";
     newCardBody.className = "card-body";
 
-    const fullName = document.createElement("h2");
-    fullName.className = "full-name";
-    fullName.textContent = card.name;
+    newCardHeader.innerHTML = `<a href="${card.urlLive || '#'}" target="_blank"><img src="./images/${card.screenshotImg}" alt="${card.screenshotAlt}" class="portfolio-img"></a>`
 
-    newCardBody.appendChild(fullName);
+    newCardBody.innerHTML = `
+        <h2 class="full-name">${card.name}</h2>
+        <p>${card.purpose}${card.purpose.length < 40 ? '<br><br><br>' : (card.purpose.length < 80 ? '<br><br>' : '') }</p>
+        <div class="project-type">
+            <img src="./images/${card.typeLogoImg}" alt="${card.typeLogoAlt}">
+            <p>${card.type}</p>
+            <img src="./images/${card.typeLogoImg}" alt="${card.typeLogoAlt}">
+        </div>
+        <p class="desc">${card.description}</p>
+        <p>
+            <a href="${card.urlLive || '#'}" target="_blank" title="Visit the Live Site" class="social-icon folio"><i class="fas fa-external-link-alt"></i></a>
+            <a href="${card.urlGithub || '#'}" target="_blank" title="Github Repo" class="social-icon github"><i class="fab fa-github"></i></a>
+        </p>
+        `;
+
     newCard.appendChild(newCardHeader);
     newCard.appendChild(newCardBody);
     portfolioTab.appendChild(newCard);

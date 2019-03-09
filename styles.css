@@ -123,6 +123,14 @@ body {
     border-right: 1px solid #e6e6e6;
 }
 
+
+.card .resources-header {
+    position: relative;
+    height: 48px;
+    background-color: #e6e6e6;
+    border-left: 16px solid sandybrown;
+}
+
 @media screen and (max-width: 575px) {
     .card {
         width: 96%;

@@ -5,8 +5,9 @@ const portfolioCards = [
         type: 'DigitalCrafts Group Project',
         typeLogoImg: 'logoDC.png',
         typeLogoAlt: 'Digital Crafts Logo',
-        purpose: 'Find meetups based on topic and distance from your location and see them displayed on a Google Map.',
-        description: 'Front-end web stack project using vanilla HTML5, CSS3, and Javascript/ES6 to access the Meetup.com and Google Maps REST APIs. The live site is deployed via an AWS EC2 instance.',
+        description: 'Find meetups based on topic and distance from your location and see them displayed on a Google Map.',
+        builtWith: 'HTML5, CSS3, Javascript/ES6, Meetup.com and Google Maps REST APIs',
+        deployedVia: 'AWS EC2 instance',
         screenshotImg: 'screenshotMeetcha.png',
         screenshotAlt: 'Meetcha Screenshot',
         urlLive: 'https://meetcha.co/',
@@ -18,8 +19,9 @@ const portfolioCards = [
         type: 'DigitalCrafts Solo Project',
         typeLogoImg: 'logoDC.png',
         typeLogoAlt: 'Digital Crafts Logo',
-        purpose: 'Check the upcoming arrival times for trains at any MARTA train station.',
-        description: 'Front-end web stack project using HTML5, CSS3, and ReactJS to access realtime train arrival data from the MARTA REST API. The live site is deployed via an AWS EC2 instance.',
+        description: 'Check the upcoming arrival times for trains at any MARTA train station.',
+        builtWith: 'HTML5, CSS3, React, MARTA REST API',
+        deployedVia: 'AWS EC2 instance',
         screenshotImg: 'screenshotMartaDB.png',
         screenshotAlt: 'Marta Dashboard Screenshot',
         urlLive: 'http://www.trainarrive.info/',
@@ -31,8 +33,9 @@ const portfolioCards = [
         type: 'DigitalCrafts Group Project',
         typeLogoImg: 'logoDC.png',
         typeLogoAlt: 'Digital Crafts Logo',
-        purpose: 'Save your GPS location-based reminders via IFTTT and the Twilio SMS messaging API and share them with other users.',
-        description: 'Full-stack web project using HTML5, CSS3, Javascript/ES6, Express, NodeJS, and PostgreSQL, along with the Twilio SMS and Google Maps APIs. The live site is deployed via an AWS EC2 instance.',
+        description: 'Save your GPS location-based reminders via IFTTT and the Twilio SMS messaging API and share them with other users.',
+        builtWith: 'HTML5, CSS3, Javascript/ES6, Express, NodeJS, PostgreSQL, IFTTT, Twilio SMS and Google Maps API',
+        deployedVia: 'AWS EC2 instance',
         screenshotImg: 'screenshotGeoMindr.png',
         screenshotAlt: 'Geo Minder Screenshot',
         urlLive: 'https://geomindr.com/home',
@@ -44,8 +47,9 @@ const portfolioCards = [
         type: 'DigitalCrafts Solo Project',
         typeLogoImg: 'logoDC.png',
         typeLogoAlt: 'Digital Crafts Logo',
-        purpose: 'See a random Fortune Cookie or a random Coding-themed quote and Tweet any that you like.',
-        description: 'Simple Front-end web project using vanilla HTML5, CSS3, and Javascript/ES6, along with the Twitter API. This site is not yet deployed live. Check back soon!',
+        description: 'See a random Fortune Cookie or a random Coding-themed quote and Tweet any that you like.',
+        builtWith: 'HTML5, CSS3, Javascript/ES6, Twitter API', 
+        deployedVia: 'This site is not yet deployed live. Check back soon!',
         screenshotImg: 'screenshotFortune.png',
         screenshotAlt: 'Fortune Cookie Screenshot',
         urlLive: 'https://github.com/GFore/dc-FortuneTeller',
@@ -69,13 +73,14 @@ portfolioCards.forEach(card => {
 
     newCardBody.innerHTML = `
         <h2 class="full-name">${card.name}</h2>
-        <p>${card.purpose}${card.purpose.length < 40 ? '<br><br><br>' : (card.purpose.length < 80 ? '<br><br>' : '') }</p>
+        <p>${card.description}${card.description.length < 40 ? '<br><br><br>' : (card.description.length < 80 ? '<br><br>' : '') }</p>
         <div class="project-type">
             <img src="./images/${card.typeLogoImg}" alt="${card.typeLogoAlt}">
             <p>${card.type}</p>
             <img src="./images/${card.typeLogoImg}" alt="${card.typeLogoAlt}">
         </div>
-        <p class="desc">${card.description}</p>
+        <p class="desc"><b>Built with: </b>${card.builtWith}</p>
+        <p class="desc"><b>Deployed via: </b>${card.deployedVia}</p>
         <p>
             <a href="${card.urlLive || '#'}" target="_blank" title="Visit the Live Site" class="social-icon folio"><i class="fas fa-external-link-alt"></i></a>
             <a href="${card.urlGithub || '#'}" target="_blank" title="Github Repo" class="social-icon github"><i class="fab fa-github"></i></a>

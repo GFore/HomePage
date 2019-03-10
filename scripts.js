@@ -74,17 +74,21 @@ portfolioCards.forEach(card => {
     newCardBody.innerHTML = `
         <h2 class="full-name">${card.name}</h2>
         <p>${card.description}${card.description.length < 40 ? '<br><br><br>' : (card.description.length < 80 ? '<br><br>' : '') }</p>
+        <!-- 
         <div class="project-type">
             <img src="./images/${card.typeLogoImg}" alt="${card.typeLogoAlt}">
             <p>${card.type}</p>
             <img src="./images/${card.typeLogoImg}" alt="${card.typeLogoAlt}">
-        </div>
+        </div> -->
         <p class="desc"><b>Built with: </b>${card.builtWith}</p>
         <p class="desc"><b>Deployed via: </b>${card.deployedVia}</p>
         <p>
             <a href="${card.urlLive || '#'}" target="_blank" title="Visit the Live Site" class="social-icon folio"><i class="fas fa-external-link-alt"></i></a>
             <a href="${card.urlGithub || '#'}" target="_blank" title="Github Repo" class="social-icon github"><i class="fab fa-github"></i></a>
         </p>
+        <div class="project-type-logo">
+            <img src="./images/${card.typeLogoImg}" alt="${card.typeLogoAlt}" title="${card.type}">
+        </div>
         `;
 
     newCard.appendChild(newCardHeader);

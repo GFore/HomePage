@@ -1,3 +1,6 @@
+/* ********************************************** */
+/*            GENERAL STYLES                      */
+/* ********************************************** */
 * {box-sizing: border-box;}
 
 body {
@@ -5,11 +8,9 @@ body {
     background-color: #e6e6e6;
 }
 
-.tab {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+/* ********************************************** */
+/*              CARD STYLES                       */
+/* ********************************************** */
 
 .card {
     width: 400px;
@@ -21,80 +22,13 @@ body {
     font-size: 16px;
 }
 
-.tab .card {
-    margin: 50px 20px 20px;
-}
-
 .card .card-header {
     position: relative;
     height: 48px;
     background-color: #e6e6e6;
 }
-.card .portfolio-header {
-    height: 170px;
-    background-color: green;
-    display: flex;
-    justify-content: center;
-}
-.card .card-header .profile-img {
-    width: 96px;
-    height: 96px;
-    border-radius: 100%;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 6px solid #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
-    background-color: #e6e6e6;
-}
-.card .card-header .portfolio-img {
-    width: 350px;
-    height: 150px;
-    border-radius: 10px;
-    border: 2px solid #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
-    margin: 10px;
-    transition: transform 0.25s ease-out;
-}
-
-.card .card-header .portfolio-img:hover {
-    transform: scale(1.17);
-}
 
 .card .card-body {padding: 10px 40px;}
-.tab .card .card-body {height: 400px}
-.card .card-body .full-name {
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin: 12px 0 0;
-}
-.card .card-body .username {font-size: 13px; color: #777; margin: 5px 0 0;}
-.card .card-body .city {font-weight: 500; margin: 10px 0 0;}
-.card .card-body .project-type {
-    font-weight: 500;
-    margin: 14px 0 0;
-    line-height: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.project-type img {
-    height: 12px;
-    /* margin-right: 8px;
-    margin-left: 8px; */
-}
-.card .card-body .desc {line-height: 24px;}
-
-.card .social-icon {font-size: 18px; margin: 0 7px;}
-.tab .card .social-icon {font-size: 22px;}
-.card .social-icon.facebook {color: #3b5999;}
-.card .social-icon.twitter {color: #55acee;}
-.card .social-icon.github {color: black;}
-.card .social-icon.youtube {color: #cd201f;}
-.card .social-icon.linkedin {color: #0077b5;}
-.card .social-icon.google-plus {color: #dd4b39;}
-.card .social-icon.folio {color: green;}
 
 .card .card-footer {
     display: table;
@@ -123,14 +57,116 @@ body {
     border-right: 1px solid #e6e6e6;
 }
 
+/* ********************************************** */
+/*               TAB STYLES                       */
+/* ********************************************** */
 
+.tab {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tab .card {
+    margin: 50px 20px 20px;
+}
+
+.tab .card .card-body {height: 400px}
+.tab .card .social-icon {font-size: 22px;}
+
+/* ********************************************** */
+/*           PROFILE CARD STYLES                  */
+/* ********************************************** */
+
+.card .card-header .profile-img {
+    width: 96px;
+    height: 96px;
+    border-radius: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 6px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    background-color: #e6e6e6;
+}
+
+.card .card-body .full-name {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 12px 0 0;
+}
+.card .card-body .username {font-size: 13px; color: #777; margin: 5px 0 0;}
+.card .card-body .city {font-weight: 500; margin: 10px 0 0;}
+.card .card-body .project-type {
+    font-weight: 500;
+    margin: 14px 0 0;
+    line-height: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.project-type img {
+    height: 12px;
+    /* margin-right: 8px;
+    margin-left: 8px; */
+}
+.card .card-body .desc {line-height: 24px;}
+.card .social-icon {font-size: 18px; margin: 0 7px;}
+.card .social-icon.facebook {color: #3b5999;}
+.card .social-icon.twitter {color: #55acee;}
+.card .social-icon.github {color: black;}
+.card .social-icon.youtube {color: #cd201f;}
+.card .social-icon.linkedin {color: #0077b5;}
+.card .social-icon.google-plus {color: #dd4b39;}
+.card .social-icon.folio {color: green;}
+
+/* ********************************************** */
+/*          PORTFOLIO CARD STYLES                 */
+/* ********************************************** */
+
+.card .portfolio-header {
+    height: 170px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+}
+
+.card .card-header .portfolio-img {
+    width: 350px;
+    height: 150px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    margin: 10px;
+    transition: transform 0.25s ease-out;
+}
+
+.card .card-header .portfolio-img:hover {
+    transform: scale(1.17);
+}
+
+/* ********************************************** */
+/*          RESOURCES CARD STYLES                 */
+/* ********************************************** */
 .card .resources-header {
     position: relative;
     height: 48px;
     background-color: #e6e6e6;
     border-left: 16px solid sandybrown;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.card .resources-header h2 {
+    margin: 0;
 }
 
+
+/* ********************************************** */
+/*                 MEDIA QUERIES                  */
+/* ********************************************** */
 @media screen and (max-width: 575px) {
     .card {
         width: 96%;

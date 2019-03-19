@@ -55,7 +55,22 @@ const portfolioCards = [
         urlLive: 'https://github.com/GFore/dc-FortuneTeller',
         urlGithub: 'https://github.com/GFore/dc-FortuneTeller',
     },
+    {
+        id: 5,
+        name: 'Local Weather',
+        type: 'FreeCodeCamp Front-End Project',
+        typeLogoImg: 'logoFCC.png',
+        typeLogoAlt: 'Free Code Camp Logo',
+        description: 'Get your current local weather report',
+        builtWith: 'HTML5, CSS3, Javascript, FCC Weather API', 
+        deployedVia: 'Codepen',
+        screenshotImg: 'screenshotLocalWeather.png',
+        screenshotAlt: 'Local Weather Screenshot',
+        urlLive: 'https://codepen.io/Gfore/full/bLjZvr',
+        urlGithub: 'https://codepen.io/Gfore/pen/bLjZvr?editors=1010',
+    },
 ]
+
 
 
 const portfolioTab = document.querySelector('[data-portfolio]');

@@ -89,12 +89,6 @@ portfolioCards.forEach(card => {
     newCardBody.innerHTML = `
         <h2 class="full-name">${card.name}</h2>
         <p>${card.description}${card.description.length < 40 ? '<br><br><br>' : (card.description.length < 80 ? '<br><br>' : '') }</p>
-        <!-- 
-        <div class="project-type">
-            <img src="./images/${card.typeLogoImg}" alt="${card.typeLogoAlt}">
-            <p>${card.type}</p>
-            <img src="./images/${card.typeLogoImg}" alt="${card.typeLogoAlt}">
-        </div> -->
         <p class="desc"><b>Built with: </b>${card.builtWith}</p>
         <p class="desc"><b>Deployed via: </b>${card.deployedVia}</p>
         <p>

@@ -153,9 +153,20 @@ body {
     position: absolute;
     bottom: 3px;
     right: 5px;
-    /* background-color: pink; */
-    padding: 5px;
-    margin: -5px;
+    background-color: pink;
+    /* padding: 8px;
+    margin: -5px; */
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    /* display: flex; */
+    text-align: center;
+
+}
+
+.card .card-body .project-type-logo img {
+    /* width: 75%; */
+
 }
 
 /* ********************************************** */

@@ -96,7 +96,7 @@ portfolioCards.forEach(card => {
             <a href="${card.urlGithub || '#'}" target="_blank" title="Github Repo" class="social-icon github"><i class="fab fa-github"></i></a>
         </p>
         <div class="project-type-logo">
-            <img src="./images/${card.typeLogoImg}" alt="${card.typeLogoAlt}" title="${card.type}">
+            <img src="./images/${card.typeLogoImg}" alt="${card.typeLogoAlt}" title="${card.type}" style="margin: auto;">
         </div>
         `;
 
@@ -104,4 +104,3 @@ portfolioCards.forEach(card => {
     newCard.appendChild(newCardBody);
     portfolioTab.appendChild(newCard);
 })
-

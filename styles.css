@@ -151,23 +151,18 @@ body {
 
 .card .card-body .project-type-logo {
     position: absolute;
-    bottom: 3px;
-    right: 5px;
-    background-color: pink;
-    /* padding: 8px;
-    margin: -5px; */
-    border-radius: 100%;
-    width: 60px;
-    height: 60px;
-    /* display: flex; */
-    text-align: center;
+    bottom: 0px;
+    right: 0px;
+    background-color: #e6e6e6;
+    border-radius: 0 30% 0 30%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    /* text-align: center; */
+    border: 1px solid green;
 
 }
 
-.card .card-body .project-type-logo img {
-    /* width: 75%; */
-
-}
 
 /* ********************************************** */
 /*          RESOURCES CARD STYLES                 */

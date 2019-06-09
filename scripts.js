@@ -6,7 +6,7 @@ const portfolioCards = [
         typeLogoImg: 'logoReact.png',
         typeLogoAlt: 'React JS Logo',
         description: 'Play TicTacToe against another player and see history of moves in each game, as well as real-time results displayed in live charts',
-        builtWith: 'ReactJS, HTML5, CSS3, Radium, Nivo Charts Data Viz Library',
+        builtWith: 'ReactJS, HTML5, CSS3, Radium, Nivo Charts D3.js Data Viz Library, Web Storage API (localStorage)',
         deployedVia: 'GitHub Pages',
         screenshotImg: 'screenshotReacTacToe.png',
         screenshotAlt: 'Reac-Tac-Toe Screenshot',
